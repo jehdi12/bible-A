@@ -1,0 +1,58 @@
+public class DiscipleConversion {
+
+    public static void main(String[] args) {
+        long totalPopulation = 7700000000L; 
+        int initialDisciples = 13; 
+        int disciplesTrainedPerCycle = 2; 
+        int cycleDurationInYears = 3; 
+
+        long yearsRequired = calculateYearsToConvert(totalPopulation, initialDisciples, disciplesTrainedPerCycle, cycleDurationInYears);
+
+        System.out.println("It would take approximately " + yearsRequired + " years to convert all humans into disciples.");
+    }
+
+    public static long calculateYearsToConvert(long totalPopulation, int initialDisciples, int disciplesTrainedPerCycle, int cycleDurationInYears) {
+        long years = 0;
+        long currentDisciples = initialDisciples;
+
+        while (currentDisciples < totalPopulation) {
+            currentDisciples += (currentDisciples * disciplesTrainedPerCycle); // Each disciple trains more disciples
+            years += cycleDurationInYears;
+        }
+
+        return years;
+    }
+}
+
+
+
+public class DiscipleConversion {
+
+    public static void main(String[] args) {
+        long totalPopulation = 7700000000L; 
+        int initialDisciples = 13; 
+        int targetYears = 50; years
+
+        int disciplesPerCycle = calculateDisciplesPerCycle(totalPopulation, initialDisciples, targetYears);
+
+        System.out.println("To achieve the goal in " + targetYears + " years, " + disciplesPerCycle + " disciples should be trained together at a time.");
+    }
+
+    public static int calculateDisciplesPerCycle(long totalPopulation, int initialDisciples, int targetYears) {
+        int disciplesPerCycle = 1; 
+        long years = 0;
+        long currentDisciples = initialDisciples;
+
+        while (years < targetYears && currentDisciples < totalPopulation) {
+            currentDisciples += (currentDisciples * disciplesPerCycle); 
+            years += 3; 
+            disciplesPerCycle++; 
+        }
+
+        return disciplesPerCycle;
+    }
+}
+
+
+This increased algorithm calculates the number of disciples who should be trained at the same time in order to reach the objective in 50 years. 
+It increases the number of disciples trained per cycle iteratively until the target time period is met.
